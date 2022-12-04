@@ -1,6 +1,6 @@
 package org.example.dominio;
 
-public class Course {
+public class Course extends Content {
 
    //criando atributos
 
@@ -15,12 +15,11 @@ public class Course {
    public String toString() {
       return "Course{" +
               "workload=" + workload +
-              ", name='" + name + '\'' +
-              ", description='" + description + '\'' +
+              ", name='" + getName() + '\'' +
+              ", description='" + getDescription() + '\'' +
               '}';
    }
 
-   private String name;
 
    public int getWorkload() {
       return workload;
@@ -30,22 +29,9 @@ public class Course {
       this.workload = workload;
    }
 
-   public String getName() {
-      return name;
+
+   @Override
+   public double calculationDefault() {
+      return DEFAULT + workload;
    }
-
-   public void setName(String name) {
-      this.name = name;
-   }
-
-   public String getDescription() {
-      return description;
-   }
-
-   public void setDescription(String description) {
-      this.description = description;
-   }
-
-   private String description;
-
 }
