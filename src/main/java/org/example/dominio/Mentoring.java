@@ -33,8 +33,13 @@ public class Mentoring extends Content{
 
     LocalDate date;
 
+
     @Override
     public double calculationDefault() {
+        return 0;
+    }
+
+    public double score() {
 
         return DEFAULT + 20d;
     }

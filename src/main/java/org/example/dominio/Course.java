@@ -34,4 +34,9 @@ public class Course extends Content {
    public double calculationDefault() {
       return DEFAULT + workload;
    }
+
+   @Override
+   public double score() {
+      return 0;
+   }
 }

@@ -29,4 +29,6 @@ public abstract class Content {
     private String description;
 
     public abstract double calculationDefault();
+
+    public abstract double score();
 }
